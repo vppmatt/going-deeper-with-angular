@@ -1,0 +1,11 @@
+<h2>Songs</h2>
+<button (click)="replaceSong()" >replace first song</button>
+<br />
+
+<ul>
+    <ng-container *ngFor="let song of dataService.songs">
+        <app-song [song]="song" [isTopSong]="song.votes == topScore" (voteUp)="onVote($event)"></app-song>
+    </ng-container>
+</ul>
+
+<br />

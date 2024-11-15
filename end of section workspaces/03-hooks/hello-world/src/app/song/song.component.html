@@ -1,0 +1,8 @@
+<li [ngStyle]="isTopSong ? {color: 'red' , 'font-weight': 'bold'} : {}"> 
+    {{song.title}} by {{song.artist}}. 
+    Price: {{song.price | currency : "EUR"}}. 
+    Date released: {{song.dateReleased | date : "yyyy/MM/dd"}}.
+    - {{song.votes}} votes
+    <button class="btn btn-sm btn-info" (click)="clickVoteUp()" >+</button>
+    <span  *ngIf="isTopSong">TOP SONG!</span>
+</li>

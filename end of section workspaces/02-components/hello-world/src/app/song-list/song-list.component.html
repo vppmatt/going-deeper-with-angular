@@ -1,0 +1,7 @@
+<h2>Songs</h2>
+
+<ul>
+    <ng-container *ngFor="let song of songs">
+        <app-song [song]="song" (voteUp)="onVote($event)"></app-song>
+    </ng-container>
+</ul>

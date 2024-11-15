@@ -1,0 +1,15 @@
+<div class="container my-5 p-5 border">
+  <h1>{{title}}</h1>
+
+  <div class="row my-2">
+    <p class="col-lg-4">My name is <span><b>{{name}}</b></span></p>
+    <p class="col-lg-4">The button was clicked {{counter}} times</p>
+  </div>
+  <div class="row my-2">
+    <button (click)="onButtonClick()" class="btn btn-primary">Add one</button>
+  </div>
+  <app-song-list></app-song-list>
+
+  <img [src]="imageUrl" [alt]="imageAlt">
+</div>
+
