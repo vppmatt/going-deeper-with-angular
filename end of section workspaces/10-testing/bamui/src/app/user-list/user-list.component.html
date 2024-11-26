@@ -1,0 +1,19 @@
+<h1>Users</h1>
+
+<div [class]="displayClass" >{{displayMessage}}</div>
+
+<table class="table userlist">
+    <thead>
+        <tr>
+            <th>Id</th><th>First name</th><th>Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.firstname }}</td>
+    <td>{{ user.surname }}</td>
+    <td></td>
+    
+  </tbody>
+  </table>
