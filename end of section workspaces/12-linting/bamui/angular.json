@@ -108,15 +108,30 @@
               "src/styles.css"
             ],
             "scripts": [],
-	"fileReplacements": [
+            "fileReplacements": [
               {"replace": "node_modules/ag-grid-community/styles/ag-grid.css",
                 "with": "src/blank.css"},
               {"replace": "node_modules/ag-grid-community/styles/ag-theme-quartz.css",
                 "with": "src/blank.css"}
             ]
+            
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

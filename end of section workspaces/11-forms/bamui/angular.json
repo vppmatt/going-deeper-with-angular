@@ -107,7 +107,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+"fileReplacements": [
+              {"replace": "node_modules/ag-grid-community/styles/ag-grid.css",
+                "with": "src/blank.css"},
+              {"replace": "node_modules/ag-grid-community/styles/ag-theme-quartz.css",
+                "with": "src/blank.css"}
+            ]
           }
         }
       }
