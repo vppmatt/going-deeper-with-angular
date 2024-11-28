@@ -1,0 +1,25 @@
+<h1>Access Records</h1>
+
+<h2>Access records for : {{date}}</h2>
+
+<ag-grid-angular [rowData]="accessLogs" [columnDefs]="columnDefs"
+class="ag-theme-quartz"
+style="height: 500px;"></ag-grid-angular>
+
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th>Id</th><th>User</th><th>time</th><th>building</th><th>Direction</th>
+        </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let accessLog of accessLogs">
+    <td>{{ accessLog.id }}</td>
+    <td>{{ accessLog.user.firstname }} {{ accessLog.user.surname}}</td>
+    <td>{{ accessLog.time }}</td>
+    <td>{{ accessLog.building }}</td>
+    <td>{{ accessLog.status ? "in" : "out" }}</td>
+    <td></td>
+    
+  </tbody>
+  </table> -->

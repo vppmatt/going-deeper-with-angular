@@ -1,0 +1,17 @@
+<h3 *ngIf="building" >There are {{accessLogs.length}} users in {{building}} right now</h3>
+
+<table *ngIf="building" class="table">
+    <thead>
+        <tr>
+            <th>Id</th><th>User</th><th>Last Entry Time</th>
+        </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let accessLog of accessLogs">
+    <td>{{ accessLog.id }}</td>
+    <td>{{ accessLog.user.firstname }} {{ accessLog.user.surname}}</td>
+    <td>{{ accessLog.time }}</td>
+    <td></td>
+    
+  </tbody>
+  </table>
