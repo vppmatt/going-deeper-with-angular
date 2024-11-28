@@ -1,0 +1,30 @@
+<h2>Bulk edit users</h2>
+
+<form [formGroup]="mainForm" (ngSubmit) = "handleSubmit()"> 
+    <div formArrayName="userForms">
+        <div *ngFor="let userForm of userForms.controls; let i = index">
+            <div class="form-group row my-3" [formGroupName]="i" >
+                <div class="col-sm-1">
+                    <label for="id" class="col-sm-2 col-form-label">Id</label>
+                    <input type="number" class="form-control" id="id" readonly formControlName="id" >
+                </div>
+                <div class="col-sm-5">
+                    <label for="firstname"class="col-sm-2 col-form-label">First name</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="firstname">
+                </div>
+                <div class="col-sm-5">
+                    <label for="surname"class="col-sm-2 col-form-label">Surname</label>
+                    <input type="text" class="form-control" id="surname" formControlName="surname">
+                </div>
+                <div class="col-sm-1">
+                    <button type="button" class="btn btn-danger my-3" (click)="removeUser(i)">delete</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <button type="button" class="btn btn-primary my-3" (click)="addUser()">Add user</button>
+    <button type="submit" class="btn btn-primary my-3">submit</button>
+
+</form>

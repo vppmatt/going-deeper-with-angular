@@ -1,0 +1,9 @@
+
+<div [class]="displayClass">{{displayMessage}}</div>
+
+<div class="my-3">Select a building: 
+    <select (change)="handleChangeBuilding($event)" [value]="building">
+      <option value="">--select--</option>
+      <option *ngFor="let building of buildings" [value]="building.name">{{building.name}}</option>
+    </select>
+</div>
